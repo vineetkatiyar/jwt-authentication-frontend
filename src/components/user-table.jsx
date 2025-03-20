@@ -5,7 +5,7 @@ const UserTable = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
      axios
-       .get("http://localhost:8080/api/v1/users")
+       .get("https://jwt-authentication-backend-jues.onrender.com/api/v1/users")
        .then((response) => {
          console.log("API Response:", response.data); // Log response
          setUsers(response.data.data);

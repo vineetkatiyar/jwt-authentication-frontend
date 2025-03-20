@@ -19,7 +19,7 @@ const Signup = () => {
     setLoading(true);
     setMessage("");
     try {
-      await axios.post("http://localhost:8080/api/v1/users/sign-up", formData);
+      await axios.post(`https://jwt-authentication-backend-jues.onrender.com/api/v1/users/sign-up`, formData);
       setMessage("Signup successful! You can now log in.");
     } catch (error) {
       setMessage(error.response?.data?.message || "Signup failed. Try again.");
